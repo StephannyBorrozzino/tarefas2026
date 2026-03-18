@@ -1,0 +1,19 @@
+CREATE DATABASE dbestacionamento;
+
+USE dbestacionamento;
+
+CREATE TABLE registros (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    data DATE NOT NULL,
+    horario_entrada TIME NOT NULL,
+    horario_saida TIME,
+    placa VARCHAR(7) NOT NULL,
+    modelo VARCHAR(50)
+);
+
+INSERT INTO registros (data, horario_entrada, horario_saida, placa, modelo)
+VALUES 
+('2026-03-11', '09:00:00', '11:00:00', 'VW459A0', 'Toyota Corolla'),
+('2026-03-11', '11:50:00', '12:20:00', 'AS125AZ', 'Fiat Uno'),
+('2026-03-11', '12:00:00', '12:20:00', '94AB241', 'Fiorino'),
+('2026-03-12', '07:45:00', '09:30:00', '86GT23W', 'Chevrolet Onix');

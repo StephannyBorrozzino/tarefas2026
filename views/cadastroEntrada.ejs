@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <%- include("./partials/head") %>
+<body>
+     <header class="bg-primary superior d-flex flex-row p-3">
+        <div class="flex-grow-1">
+            <h1 class="fs-3"><i class="bi bi-clipboard"></i> Registros do Estacionamento</h1>
+        </div>
+        <div class="flex-grow-1 d-flex flex-row-reverse">
+
+            <button type="button btn-primary" class="btn">
+                <h1 class="fs-3 px-3">
+                    <i class="bi bi-person-circle"></i> login
+                </h1>
+            </button>
+            
+        </div>
+    </header>
+
+    <main class="container d-flex flex-column justify-content-center align-items-center">
+
+       <h2>Entrada</h2>
+
+       <div class="p-4 my-5 d-flex flex-column border shadow justify-content-center " style="width: 500px;">
+       <div class="d-flex flex-row mb-4 align-items-center">
+       <label for="placa" class="form-label mx-2">Placa</label>
+       <input type="email" name="placa" id="placa" class="form-control">
+       </div>
+       <div class="d-flex flex-row mb-4 align-items-center">
+       <label for="modelo" class="form-label mx-2">Modelo</label>
+       <input type="email" name="modelo" id="modelo" class="form-control">
+       </div>
+       <div class="d-flex flex-row mb-4 align-items-center">
+       <label for="horario_entrada" class="form-label mx-2">Horário de Entrada</label>
+       <input type="email" name="horario_entrada" id="horario_entrada" class="form-control">
+       </div>
+       <div class="d-flex flex-row mb-4 align-items-center">
+       <label for="horario_saida" class="form-label mx-2">Horário de Saída</label>
+       <input type="email" name="horario_saida" id="horario_saida" class="form-control">
+       </div>
+        <div class="d-flex flex-row">
+        <button type="button" class="btn btn-primary mx-2">Ok</button>
+        <button type="button" class="btn btn-danger mx-2">Cancelar</button>
+       </div>
+       </div>
+
+    </main>
+ 
+    <%- include("./partials/footer") %>
+</body>
+</html>

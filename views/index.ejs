@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <%- include("./partials/head") %>
+<body>
+     <header class="bg-primary superior d-flex flex-row p-3">
+        <div class="flex-grow-1">
+            <h1 class="fs-3"><i class="bi bi-clipboard"></i> Registros do Estacionamento</h1>
+        </div>
+        <div class="flex-grow-1 d-flex flex-row-reverse">
+
+            <button type="button btn-primary" class="btn">
+                <h1 class="fs-3 px-3">
+                    <i class="bi bi-person-circle"></i> login
+                </h1>
+            </button>
+            
+        </div>
+    </header>
+
+    <main class="container d-flex flex-column">
+
+        <div class="d-flex gap-3 my-3">
+            <a href="/cadastroEntrada">
+            <button type="button" class="btn btn-primary"> <i class="bi bi-plus"></i> Cadastrar Entrada</button>
+            </a>
+        </div>
+
+        <table class="container table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col" class="align-middle px-4">N</th>
+                    <th scope="col" class="align-middle px-4">Data</th>
+                    <th scope="col" class="align-middle px-4">Placa</th>
+                    <th scope="col" class="align-middle px-4">Modelo</th>
+                    <th scope="col" class="align-middle px-4">Entrada</th>
+                    <th scope="col" class="align-middle px-4">Saida</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <% dados.forEach((registro, indice) => { %>
+                <tr>
+                    <td scope="row" class="align-middle px-4"><%= indice + 1 %></td>
+                     <td class="align-middle px-4"><%= registro.data %></td>
+                    <td class="align-middle px-4"><%= registro.placa %></td>
+                    <td class="align-middle px-4"><%= registro.modelo %></td>
+                    <td class="align-middle px-4"><%= registro.horario_entrada %></td>
+                    <td class="align-middle px-4"><%= registro.horario_saida  %></td>
+                    <td class="align-middle px-4">
+
+                        <button type="button" class="btn btn-primary mx-2"><i class="bi bi-pencil"></i> Editar</button>
+                        <button type="button" class="btn btn-danger mx-2"><i class="bi bi-trash"></i> Excluir</button>
+
+                    </td>
+                </tr>
+
+                <%  }); %>
+
+            </tbody>
+        </table>
+
+    </main>
+ 
+        <%- include("./partials/footer") %>
+    
+</body>
+</html>
