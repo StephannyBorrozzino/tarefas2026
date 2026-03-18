@@ -6,7 +6,6 @@ const app = express();
 require("dotenv").config();
 
 const registroRoutes = require("./routes/rotas.routes");
-const { title } = require("process");
 
 app.use(morgan("dev"));
 app.set("views", "./views");
